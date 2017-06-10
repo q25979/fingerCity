@@ -13,6 +13,7 @@
 
     "pages/my/merchantsSettled/merchantsSettled",
     "pages/my/shopManagement/shopManagement",
+    "pages/my/message/message",
 
     "pages/release/generalRelease/generalRelease",
     "pages/release/formRelease/formRelease"

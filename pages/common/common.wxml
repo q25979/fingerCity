@@ -1,166 +1,152 @@
 <!-- 2列导航栏 -->
 <template name="nav">
-	<view class="nav clearfix">
-		<view class="navUl" wx:for="{{navUl}}" wx:key="{{i}}" wx:for-index="i" wx:for-item="ulIdx" >
-			<view data-idx="{{i}}{{j}}" class="navLi" wx:for="{{navUl[i].bgColor}}" wx:key="{{j}}" wx:for-index="j" wx:for-item="liIdx" bindtap="showList">
-				<view class="navBg center" style="background:{{ulIdx.bgColor[j]}}">
-					<image class="navImg center"
-					src="{{ulIdx.src[j]}}"></image>
-				</view>
-				<text>{{ulIdx.text[j]}}</text>
-			</view>
-		</view>
-	</view>
+  <view class="nav clearfix">
+    <view class="navUl" wx:for="{{navUl}}" wx:key="{{i}}" wx:for-index="i" wx:for-item="ulIdx">
+      <view data-idx="{{i}}{{j}}" class="navLi" wx:for="{{navUl[i].bgColor}}" wx:key="{{j}}" wx:for-index="j" wx:for-item="liIdx" bindtap="showList">
+        <view class="navBg center" style="background:{{ulIdx.bgColor[j]}}">
+          <image class="navImg center" src="{{ulIdx.src[j]}}"></image>
+        </view>
+        <text>{{ulIdx.text[j]}}</text>
+      </view>
+    </view>
+  </view>
 </template>
 <!-- 2列导航栏结束 -->
-
 <!-- 左侧导航栏 -->
 <template name="leftNav">
-	<scroll-view scroll-y="true" class="nav-left" style="height: {{showNavUl.wH}}">
-		<view bindtap="navListTap" class="nav-title {{showNavUl.currentNavList==index?'nav-left-active':''}}" wx:for="{{showNavUl.navList}}" wx:key="{{index}}" data-idx="{{index}}" >
-			{{item}}
-		</view>
-	</scroll-view>
+  <scroll-view scroll-y="true" class="nav-left" style="height: {{showNavUl.wH}}">
+    <view bindtap="navListTap" class="nav-title {{showNavUl.currentNavList==index?'nav-left-active':''}}" wx:for="{{showNavUl.navList}}" wx:key="{{index}}" data-idx="{{index}}"> {{item}} </view>
+  </scroll-view>
 </template>
 <!-- 左侧导航栏结束 -->
-
 <!-- 商家列表 -->
 <template name="shopList">
-	<view class="null-data" wx-if="{{shopList.li[0] == null}}">暂无数据~~</view>
-	<scroll-view scroll-y="true" class="scroll-view" style="height:{{shopList.wH}}">
-		<view scroll-y="true" class="shop-list clearfix" wx:for="{{shopList.li}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="shopDetails">
-			<view class="shop-list-left">
-				<image src="{{item.img}}"></image>
-			</view>
-			<view class="shop-list-right">
-				<view class="r-title">{{item.name}}</view>
-				<view class="r-old-price">原价:￥{{item.original_price}}
-				</view>
-				<view class="r-new-price">现价:￥{{item.current_price}}</view>
-				<view class="r-addr">地址:{{item.address}}</view>
-			</view>
-		</view>
-	</scroll-view>
+  <view class="null-data" wx-if="{{shopList.li[0] == null}}">暂无数据~~</view>
+  <scroll-view scroll-y="true" class="scroll-view" style="height:{{shopList.wH}}">
+    <view scroll-y="true" class="shop-list clearfix" wx:for="{{shopList.li}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="shopDetails">
+      <view class="shop-list-left">
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="shop-list-right">
+        <view class="r-title">{{item.name}}</view>
+        <view class="r-old-price">原价:￥{{item.original_price}} </view>
+        <view class="r-new-price">现价:￥{{item.current_price}}</view>
+        <view class="r-addr">地址:{{item.address}}</view>
+      </view>
+    </view>
+  </scroll-view>
 </template>
 <!-- 商家列表结束 -->
-
 <!-- 信息列表 -->
 <template name="infoList">
-	<view class="null-data" wx-if="{{infoList.li[0] == null}}">暂无数据~~</view>
-	<scroll-view scroll-y="true" class="scroll-view" style="height: {{infoList.wH}}">
-		<view class="shop-list info-list clearfix" wx:for="{{infoList.li}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="infoDetails">
-			<view class="info-header">
-				<text>{{item.title}}</text>
-			</view>
-			<view class="info-content">{{item.showContent}}</view>
-			<view class="info-footer clearfix">
-				<view class="info-data">发布时间:{{item.date}}</view>
-				<!-- <view class="info-tel">电话:{{item.tel}}</view> -->
-			</view>
-		</view>
-	</scroll-view>
+  <view class="null-data" wx-if="{{infoList.li[0] == null}}">暂无数据~~</view>
+  <scroll-view scroll-y="true" class="scroll-view" style="height: {{infoList.wH}}">
+    <view class="shop-list info-list clearfix" wx:for="{{infoList.li}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="infoDetails">
+      <view class="info-header">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="info-content">{{item.showContent}}</view>
+      <view class="info-footer clearfix">
+        <view class="info-data">发布时间:{{item.date}}</view>
+        <!-- <view class="info-tel">电话:{{item.tel}}</view> --></view>
+    </view>
+  </scroll-view>
 </template>
 <!-- 信息列表结束 -->
-
 <!-- 商品列表 -->
 <template name="commodityList">
-	<view class="null-data" wx-if="{{commodityList.li[0] == null}}">暂无数据~~</view>
-	<scroll-view scroll-y="true" class="scroll-view" style="height:{{commodityList.wH}}">
-		<view class="commodity-list clearfix" wx:for="{{commodityList.li}}" wx:key="{{index}}" data-idx="{{index}}" hidden="{{commodityList.li[index].current == false}}">
-			<view class="commodity-list-left" bindtap="commodityLiTap" data-idx="{{index}}">
-				<image src="{{item.image}}"></image>
-			</view>
-			<view class="commodity-list-right">
-				<view bindtap="commodityLiTap" class="r-title" data-idx="{{index}}">
-					<view class="top" wx:if="{{commodityList.li[index].type==3}}">推</view>
-					{{item.goods_name}}
-				</view>
-				<view class="r-price clearfix">
-					<view bindtap="commodityLiTap" data-idx="{{index}}" class="r-price-l">￥{{item.cur_price}}</view>
-					<view class="r-price-r">
-						<image hidden="{{item.num == 0}}" bindtap="minusTap" src="../../../resource/minus.png" data-idx="{{index}}"></image>
-						<text hidden="{{item.num == 0}}">{{item.num}}</text>
-						<image bindtap="addTap" src="../../../resource/add.png" data-idx="{{index}}"></image>
-					</view>
-				</view>
-			</view>
-		</view>
-		<view class="blank commodity-list"></view>
-	</scroll-view>
+  <view class="null-data" wx-if="{{commodityList.li[0] == null}}">暂无数据~~</view>
+  <scroll-view scroll-y="true" class="scroll-view" style="height:{{commodityList.wH}}">
+    <view class="commodity-list clearfix" wx:for="{{commodityList.li}}" wx:key="{{index}}" data-idx="{{index}}" hidden="{{commodityList.li[index].current == false}}">
+      <view class="commodity-list-left" bindtap="commodityLiTap" data-idx="{{index}}">
+        <image src="{{item.image}}"></image>
+      </view>
+      <view class="commodity-list-right">
+        <view bindtap="commodityLiTap" class="r-title" data-idx="{{index}}">
+          <view class="top" wx:if="{{commodityList.li[index].type==3}}">推</view> {{item.goods_name}} </view>
+        <view class="r-price clearfix">
+          <view bindtap="commodityLiTap" data-idx="{{index}}" class="r-price-l">￥{{item.cur_price}}</view>
+          <view class="r-price-r">
+            <image hidden="{{item.num == 0}}" bindtap="minusTap" src="../../../resource/minus.png" data-idx="{{index}}"></image>
+            <text hidden="{{item.num == 0}}">{{item.num}}</text>
+            <image bindtap="addTap" src="../../../resource/add.png" data-idx="{{index}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="blank commodity-list"></view>
+  </scroll-view>
 </template>
 <!-- 商品列表结束 -->
-
 <!-- 底部购物车 -->
 <template name="shoppingCart">
-	<view class="b-shoppingCart" bindtap="cartTap">
-		<view class="cart-l">
-			<image src="../../../resource/cart.png"></image>
-			<text>￥{{commodityList.sumPrice}}</text>
-		</view>
-		<view class="cart-r">去结算</view>
-		<view class="sum-num" hidden="{{commodityList.sumNum==0}}">{{commodityList.sumNum}}</view>
-	</view>
+  <view class="b-shoppingCart" bindtap="cartTap">
+    <view class="cart-l">
+      <image src="../../../resource/cart.png"></image>
+      <text>￥{{commodityList.sumPrice}}</text>
+    </view>
+    <view class="cart-r">去结算</view>
+    <view class="sum-num" hidden="{{commodityList.sumNum==0}}">{{commodityList.sumNum}}</view>
+  </view>
 </template>
 <!-- 底部购物车结束 -->
-
 <!-- 个人中心 -->
 <template name="my">
-	<view class="my-header" bindtap="loginTap">
-		<view class="head-portrait">
-			<image src="{{my.headPortrait}}"></image>
-		</view>
-		<view class="nickname">{{my.nickname}}</view>
-	</view>
-	<view class="my-content" wx:for="{{my.li}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="myTap" hidden="{{ my.li[index].myShow == false }}">
-		<view><image src="{{item.src}}"></image></view>
-		<view>{{item.text}}</view>
-		<view class="goto">></view>
-	</view>
+  <view class="my-header" bindtap="loginTap">
+    <view class="head-portrait">
+      <image src="{{my.headPortrait}}"></image>
+    </view>
+    <view class="nickname">{{my.nickname}}</view>
+  </view>
+  <!-- 消息提示 -->
+  <view class="red-spot" wx:if="{{ my.msg }}"> </view>
+  <view class="my-content" wx:for="{{my.li}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="myTap" hidden="{{ my.li[index].myShow == false }}">
+    <view>
+      <image src="{{item.src}}"></image>
+    </view>
+    <view>{{item.text}}</view>
+    <view class="goto">></view>
+  </view>
 </template>
 <!-- 个人中心结束 -->
-
 <!-- 底部导航 -->
 <template name="bottomBtn">
-	<view class="bottom-btn" bindtap="bottomBtn">{{bottomBtn}}</view>
+  <view class="bottom-btn" bindtap="bottomBtn">{{bottomBtn}}</view>
 </template>
 <!-- 底部导航结束 -->
-
 <!-- 顶部选项卡 -->
 <template name="topTab">
-	<view class="swiper-tab">
-	  <view class="swiper-tab-list {{tab.currentTab==index ? 'on' : ''}}" data-current="{{index}}" wx:for="{{tab.title}}" bindtap="swichTab" wx:key="{{index}}">
-	  	{{item}}
-	  </view>
-	</view>
-
-	<swiper current="{{tab.currentTab}}" bindchange="swichChange" class="swiper-box">
-		<swiper-item>
-			<view class="tab-content-li" wx:for="{{tab.li}}" wx:key="{{index}}" bindtap="releaseTap" data-idx="{{index}}">
-				<image src="{{tab.src[index]}}"></image>
-				<view class="tab-content-center">{{item}}</view>
-				<view class="tab-content-right">></view>
-			</view>
-		</swiper-item>
-		<swiper-item>
-			<view class="shop-release">
-				<!--发布公告-->
-				<view class="release-notice">
-					<input placeholder="输入发布公告内容" />
-					<view class="confirm-btn">{{tab.btn[0]}}</view>
-				</view>
-				<!--发布产品-->
-				<view class="release-product confirm-btn" bindtap="releaseProduct">{{tab.btn[1]}}</view>
-			</view>
-		</swiper-item>
-	</swiper>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{tab.currentTab==index ? 'on' : ''}}" data-current="{{index}}" wx:for="{{tab.title}}" bindtap="swichTab" wx:key="{{index}}"> {{item}} </view>
+  </view>
+  <swiper current="{{tab.currentTab}}" bindchange="swichChange" class="swiper-box">
+    <swiper-item>
+      <view class="tab-content-li" wx:for="{{tab.li}}" wx:key="{{index}}" bindtap="releaseTap" data-idx="{{index}}">
+        <image src="{{tab.src[index]}}"></image>
+        <view class="tab-content-center">{{item}}</view>
+        <view class="tab-content-right">></view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="shop-release">
+        <!--发布公告-->
+        <view class="release-notice">
+          <input placeholder="输入发布公告内容" />
+          <view class="confirm-btn">{{tab.btn[0]}}</view>
+        </view>
+        <!--发布产品-->
+        <view class="release-product confirm-btn" bindtap="releaseProduct">{{tab.btn[1]}}</view>
+      </view>
+    </swiper-item>
+  </swiper>
 </template>
 <!-- 顶部选项卡结束 -->
-
 <!-- 发布界面 -->
 <template name="releaseLayout">
-	<view class="tab-content-li" wx:for="{{tab.li}}" wx:key="{{index}}" bindtap="releaseTap" data-idx="{{index}}">
-		<image src="{{tab.src[index]}}"></image>
-		<view class="tab-content-center">{{item}}</view>
-		<view class="tab-content-right">></view>
-	</view>
+  <view class="tab-content-li" wx:for="{{tab.li}}" wx:key="{{index}}" bindtap="releaseTap" data-idx="{{index}}">
+    <image src="{{tab.src[index]}}"></image>
+    <view class="tab-content-center">{{item}}</view>
+    <view class="tab-content-right">></view>
+  </view>
 </template>
+

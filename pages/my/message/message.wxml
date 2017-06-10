@@ -1,0 +1,7 @@
+<view
+  class="view__message"
+  wx:for="{{ message }}"
+  wx:key="{{ index }}"
+>
+  <text>{{ item }}</text>
+</view>

@@ -1,0 +1,10 @@
+page
+{
+    background: #fff;
+}
+.view__message
+{
+    padding: 20rpx;
+
+    border-bottom: 1rpx solid #ddd;
+}

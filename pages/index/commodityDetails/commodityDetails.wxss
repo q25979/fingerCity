@@ -1,16 +1,17 @@
 @import '../../common/common.wxss';
 @import '../../../wxParse/wxParse.wxss';
-
 .commodity-header
 {
     width: 750rpx;
-    height: 450rpx;
+    height: 500rpx;
 }
+
 .commodity-header image
 {
     width: 750rpx;
-    height: 450rpx;
+    height: 500rpx;
 }
+
 .commodity-content
 {
     padding: 20rpx;
@@ -19,19 +20,23 @@
     background: #fff;
     box-shadow: 0 1rpx 5rpx #ccc;
 }
+
 .commodity-title
 {
     color: #353535;
 }
+
 .commodity-price
 {
     margin-top: 30rpx;
 }
+
 .commodity-price image
 {
     width: 40rpx;
     height: 40rpx;
 }
+
 .price-left
 {
     font-size: 14pt;
@@ -41,14 +46,17 @@
 
     color: red;
 }
+
 .price-right
 {
     float: right;
 }
+
 .price-right text
 {
     margin: 0 20rpx;
 }
+
 .commodity-details
 {
     margin: 20rpx 0 120rpx;
@@ -57,10 +65,12 @@
     background: #fff;
     box-shadow: 0 1rpx 5rpx #ccc;
 }
+
 .details-content
 {
     font-size: 11pt;
 }
+
 .details-content image
 {
     display: block;
@@ -71,7 +81,9 @@
     margin: 0 auto;
 }
 
+
 /*重写购物车*/
+
 .cart-l image
 {
     position: absolute;
@@ -81,21 +93,25 @@
     width: 90rpx;
     height: 90rpx;
 }
+
 .cart-l text
 {
     top: 40rpx;
     left: 120rpx;
 }
+
 .b-shoppingCart
 {
     height: 100rpx;
 }
+
 .cart-r
 {
     line-height: 100rpx;
 
     height: 100rpx;
 }
+
 .sum-num
 {
     top: 0;

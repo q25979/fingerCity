@@ -6,6 +6,7 @@
 
     content: '';
 }
+
 .center
 {
     position: relative;
@@ -14,7 +15,10 @@
 
     transform: translate(-49%, -49%);
 }
+
+
 /*导航*/
+
 .nav
 {
     font-size: 11pt;
@@ -24,11 +28,13 @@
 
     background: #fff;
 }
+
 .navUl
 {
     width: 750rpx;
     height: 150rpx;
 }
+
 .navLi
 {
     float: left;
@@ -39,6 +45,7 @@
 
     text-align: center;
 }
+
 .navBg
 {
     width: 120rpx;
@@ -46,6 +53,7 @@
 
     border-radius: 50%;
 }
+
 .navImg
 {
     display: block;
@@ -53,13 +61,18 @@
     width: 80rpx;
     height: 80rpx;
 }
+
 .navLi text
 {
     line-height: 90rpx;
 }
+
+
 /*导航结束*/
 
+
 /*左侧导航*/
+
 .nav-left
 {
     font-size: 11pt;
@@ -72,6 +85,7 @@
     color: #4c4c4c;
     background: #e5e5e5;
 }
+
 .nav-title
 {
     line-height: 90rpx;
@@ -82,6 +96,7 @@
 
     border-bottom: 1rpx solid #fff;
 }
+
 .nav-left-active
 {
     font-weight: bold;
@@ -89,11 +104,13 @@
     color: #2fc3ff;
     background: #fff;
 }
+
 .r-title
 {
     font-size: 13pt;
     font-weight: bold;
 }
+
 .r-title .top
 {
     font-size: 7pt;
@@ -110,9 +127,13 @@
     border: 1rpx solid #f44;
     border-radius: 5rpx;
 }
+
+
 /*左侧导航结束*/
 
+
 /*商家列表*/
+
 .scroll-view
 {
     float: right;
@@ -121,6 +142,7 @@
 
     background: #fff;
 }
+
 .shop-list
 {
     width: 100%;
@@ -129,6 +151,7 @@
     border-bottom: 1px solid #ddd;
     background: #fff;
 }
+
 .shop-list-left
 {
     float: left;
@@ -141,11 +164,13 @@
 
     border-radius: 10rpx;
 }
+
 .shop-list-left image
 {
     width: 100%;
     height: 100%;
 }
+
 .shop-list-right
 {
     font-size: 11pt;
@@ -154,6 +179,7 @@
 
     width: 240rpx;
 }
+
 .shop-list-right .r-title
 {
     font-size: 13pt;
@@ -161,6 +187,7 @@
 
     color: #000;
 }
+
 .r-new-price
 {
     font-size: 13pt;
@@ -169,6 +196,7 @@
 
     color: #f00;
 }
+
 .r-old-price
 {
     margin: 6rpx 0 0 0;
@@ -177,13 +205,18 @@
 
     color: #888;
 }
+
+
 /*商家列表结束*/
 
+
 /*信息列表*/
+
 .info-list
 {
     font-size: 11pt;
 }
+
 .info-header
 {
     font-size: 12pt;
@@ -191,6 +224,7 @@
 
     color: #333;
 }
+
 .info-content
 {
     line-height: 1.5em;
@@ -201,6 +235,7 @@
 
     color: #333;
 }
+
 .info-footer
 {
     margin-top: 15rpx;
@@ -208,15 +243,18 @@
 
     color: #666;
 }
+
 .info-data
 {
     /*float: left;*/
 }
+
 .info-tel
 {
     /*float: left;*/
     margin-top: 10rpx;
 }
+
 .null-data
 {
     line-height: 100rpx;
@@ -235,9 +273,13 @@
 
     background: #fff;
 }
+
+
 /*信息列表结束*/
 
+
 /*商品列表*/
+
 .commodity-list
 {
     float: right;
@@ -248,6 +290,7 @@
     border-bottom: 1px solid #ddd;
     background: #fff;
 }
+
 .commodity-list-left
 {
     float: left;
@@ -259,11 +302,13 @@
 
     border-radius: 5rpx;
 }
+
 .commodity-list-left image
 {
     width: 100%;
     height: 100%;
 }
+
 .commodity-list-right
 {
     font-size: 11pt;
@@ -272,16 +317,19 @@
 
     width: 65%;
 }
+
 .commodity-list-right .r-title
 {
     font-size: 11pt;
 }
+
 .commodity-list-right .r-price
 {
     margin-top: 40rpx;
 
     color: #f60;
 }
+
 .r-price-l
 {
     font-size: 13pt;
@@ -290,16 +338,19 @@
 
     vertical-align: center;
 }
+
 .r-price-r
 {
     float: right;
     /*margin-left: 25rpx;*/
 }
+
 .r-price-r image
 {
     width: 45rpx;
     height: 45rpx;
 }
+
 .r-price-r text
 {
     font-size: 13pt;
@@ -311,15 +362,20 @@
 
     color: #353535;
 }
+
 .blank
 {
     height: 140rpx;
 
     border-bottom: 0rpx;
 }
+
+
 /*商品列表结束*/
 
+
 /*底部购物车*/
+
 .b-shoppingCart
 {
     position: fixed;
@@ -331,6 +387,7 @@
 
     background: #fff;
 }
+
 .cart-l
 {
     font-size: 16pt;
@@ -343,6 +400,7 @@
 
     color: #f60;
 }
+
 .cart-l image
 {
     position: absolute;
@@ -352,12 +410,14 @@
     width: 130rpx;
     height: 130rpx;
 }
+
 .cart-l text
 {
     position: absolute;
     top: 50rpx;
     left: 135rpx;
 }
+
 .cart-r
 {
     font-weight: bold;
@@ -373,6 +433,7 @@
     color: #fff;
     background: #c96;
 }
+
 .sum-num
 {
     font-size: 9pt;
@@ -391,18 +452,23 @@
     border-radius: 50%;
     background: red;
 }
+
+
 /*底部购物车结束*/
 
+
 /*我的*/
+
 .my-header
 {
     width: 100%;
     height: 300rpx;
 
     color: white;
-    background: #2FC3FF;
+    background: #2fc3ff;
     box-shadow: 0 1rpx #c93;
 }
+
 .head-portrait
 {
     position: relative;
@@ -416,11 +482,13 @@
 
     border-radius: 50%;
 }
+
 .head-portrait image
 {
     width: 100%;
     height: 100%;
 }
+
 .nickname
 {
     position: relative;
@@ -428,6 +496,21 @@
 
     text-align: center;
 }
+
+.red-spot
+{
+    position: absolute;
+    z-index: 9999;
+    top: 345rpx;
+    left: 45rpx;
+
+    width: 15rpx;
+    height: 15rpx;
+
+    border-radius: 50%;
+    background: red;
+}
+
 .my-content
 {
     font-size: 11pt;
@@ -437,6 +520,7 @@
 
     box-shadow: 0 1rpx #ccc;
 }
+
 .my-content image
 {
     position: relative;
@@ -448,21 +532,27 @@
     width: 40rpx;
     height: 40rpx;
 }
+
 .my-content view
 {
     float: left;
 
     margin-left: 20rpx;
 }
+
 .my-content .goto
 {
     float: right;
 
     margin-right: 20rpx;
 }
+
+
 /*我的结束*/
 
+
 /*底部按钮*/
+
 .bottom-btn
 {
     font-size: 13pt;
@@ -479,9 +569,13 @@
     color: #fff;
     background: #2bc8db;
 }
+
+
 /*底部按钮结束*/
 
+
 /*顶部选项卡*/
+
 .swiper-tab
 {
     line-height: 80rpx;
@@ -492,6 +586,7 @@
 
     border-bottom: 2rpx solid #777;
 }
+
 .swiper-tab-list
 {
     font-size: 30rpx;
@@ -502,6 +597,7 @@
 
     color: #777;
 }
+
 .on
 {
     font-weight: bold;
@@ -509,6 +605,7 @@
     color: #da7c0c;
     border-bottom: 5rpx solid #da7c0c;
 }
+
 .swiper-box
 {
     height: 800rpx;
@@ -522,6 +619,7 @@
 
     border-bottom: 1rpx solid #ececec;
 }
+
 .tab-content-li image
 {
     position: relative;
@@ -535,6 +633,7 @@
 
     transform: translateY(-50%);
 }
+
 .tab-content-center,
 .tab-content-right
 {
@@ -544,12 +643,14 @@
 
     height: 100rpx;
 }
+
 .tab-content-right
 {
     float: right;
 
     margin-right: 30rpx;
 }
+
 .confirm-btn
 {
     line-height: 80rpx;
@@ -562,6 +663,7 @@
     color: #fff;
     background: #2bc8db;
 }
+
 .release-notice input
 {
     height: 100rpx;
@@ -569,26 +671,35 @@
 
     border-bottom: 1rpx solid #ececec;
 }
+
 .release-product
 {
     margin-top: 20rpx;
 }
+
+
 /*顶部选项卡结束*/
 
+
 /*富文本编辑器*/
+
 .wxParse-auto-view
 {
     margin: 20rpx 0;
 
     background-color: #fff;
 }
+
 .wxParse-auto-view view,
 .wxParse-auto-view image
 {
     /*display: block;*/
 }
+
 .wxParse-auto-view image
 {
     max-width: 700rpx;
 }
+
+
 /*富文本编辑器结束*/

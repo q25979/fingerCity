@@ -5,6 +5,7 @@ Page({
 		tel: "138878545",
 		animationData: {}, // 创建动画
 		my: {
+			msg: true,
 			headPortrait: "../../resource/shoplist_03.jpg",
 			nickname: "登录",
 			li: [{
@@ -143,8 +144,11 @@ Page({
 
 		// 消息
 		function news() {
-			wx.showModal({
+			/*wx.showModal({
 				title: "暂无消息"
+			})*/
+			wx.navigateTo({
+				url: "message/message"
 			})
 		}
 

@@ -53,7 +53,6 @@ Page({
                     wechat: res.data.wechat,
                     announcement: res.data.announcement,
                 })
-                console.log(res.data)
 
                 var oImg = that.data.commodityList.li
                 for (var i = 0; i < oImg.length; i++) {
@@ -61,6 +60,7 @@ Page({
                         oImg[i].image = that.data.noImg
                     }
                 }
+
                 that.setData({
                     "commodityList.li": oImg
                 })
