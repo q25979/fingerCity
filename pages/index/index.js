@@ -3,10 +3,10 @@
 var app = getApp()
 var WxParse = require('../../wxParse/wxParse.js')
 var bannerImg = "https://pipi.ihyou.cn/Street/images_home/1/"
+var count = 0
 
 Page({
 	data: {
-		homeUrl: "",
 		bannerImg: [bannerImg + "0.jpg", bannerImg + "1.jpg", bannerImg + "2.jpg"],
 		target: [],
 		current: 0,
@@ -22,55 +22,44 @@ Page({
 			text: ["生活服务", "招聘求职", "房屋售租", "二手买卖"]
 		}]
 	},
-	onLoad: function(res) {
+	onShow: function() {
 		var that = this
-
-		this.setData({
-			homeUrl: app.globalData.serviceUrl + "home",
-		})
 
 		// 获取经纬度
 		wx.getLocation({
 			type: "gcj02",
 			success: function(res) {
-				// 把经纬度返回全局
-				app.globalData.lat = res.latitude
-				app.globalData.lon = res.longitude
-
+				// 判断是否要把定位的值存放
+				if (count == 0) {
+					// 把经纬度返回全局
+					app.globalData.lat = res.latitude
+					app.globalData.lon = res.longitude
+					count++
+				}
 				// 登录
-				wx.login({
-					success: function(res) {
-						if (res.code) {
-							app.globalData.openid = res.code
-							that.sendRequest(res.code)
-						} else {
-							console.log("用户登录获取失败" + res.errMsg)
-						}
-
-						//获取用户信息
-						wx.getUserInfo({
-							withCredentials: false,
-							success: function(res) {
-								var userInfo = res.userInfo
-
-								app.globalData.nickName = userInfo.nickName
-								app.globalData.avatarUrl = userInfo.avatarUrl
-							},
-							fail: function() {
-								console.log("请求失败")
-							}
-						})
-					}
-				})
+				that.loginFn()
 			},
 			fail: function() {
 				console.log("定位fail")
 			}
 		})
 	},
-	onShow: function() {
-		console.log(app.globalData.openid)
-		// this.sendRequest(app.globalData.openid)
+	// 登录获取id
+	loginFn: function() {
+		var that = this
+		wx.login({
+			success: function(res) {
+				if (res.code) {
+					app.globalData.openid = res.code
+					that.sendRequest(res.code)
+				} else {
+					console.log("用户登录获取失败" + res.errMsg)
+				}
+
+				// 设置用户信息
+				that.setUserInfoFn()
+			}
+		})
 	},
 	// 发送请求
 	sendRequest: function(js_code) {
@@ -78,7 +67,7 @@ Page({
 
 		// 给后台发送数据
 		wx.request({
-			url: that.data.homeUrl,
+			url: app.globalData.serviceUrl + "home",
 			header: {
 				'content-type': 'application/x-www-form-urlencoded'
 			},
@@ -122,6 +111,21 @@ Page({
 			}
 		})
 	},
+	// 设置用户信息
+	setUserInfoFn: function() {
+		wx.getUserInfo({
+			withCredentials: false,
+			success: function(res) {
+				var userInfo = res.userInfo
+
+				app.globalData.nickName = userInfo.nickName
+				app.globalData.avatarUrl = userInfo.avatarUrl
+			},
+			fail: function() {
+				console.log("请求失败")
+			}
+		})
+	},
 	showList: function(e) {
 		var index = e.currentTarget.dataset.idx
 
@@ -136,7 +140,6 @@ Page({
 		// 设置缓存
 		wx.setStorageSync('target', this.data.target)
 
-		// console.log(index)
 		wx.navigateTo({
 			url: "banner/banner?id=" + index
 		})
