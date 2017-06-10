@@ -1,0 +1,9 @@
+<view
+  class="single-list"
+  wx:for="{{ list }}"
+  wx:key="{{ index }}"
+  bindtap="selectionTap"
+>
+  <view class="title"> {{ item.position }} </view>
+  <view class="point"> > </view>
+</view>

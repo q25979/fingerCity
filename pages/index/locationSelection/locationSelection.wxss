@@ -1,0 +1,13 @@
+.single-list {
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	height: 80rpx;
+	line-height: 80rpx;
+	padding: 20rpx;
+}
+.single-list .title {
+	float: left;
+}
+.single-list .point {
+	float: right;
+}

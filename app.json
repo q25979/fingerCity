@@ -10,6 +10,7 @@
     "pages/index/infoDetails/infoDetails",
     "pages/index/carts/carts",
     "pages/index/banner/banner",
+    "pages/index/locationSelection/locationSelection",
 
     "pages/my/merchantsSettled/merchantsSettled",
     "pages/my/shopManagement/shopManagement",

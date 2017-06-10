@@ -10,8 +10,6 @@ Page({
 		bannerImg: [bannerImg + "0.jpg", bannerImg + "1.jpg", bannerImg + "2.jpg"],
 		target: [],
 		current: 0,
-		latitude: 0,
-		longitude: 0,
 		openid: null,
 		region: "定位中...",
 		navUl: [{
@@ -35,11 +33,6 @@ Page({
 		wx.getLocation({
 			type: "gcj02",
 			success: function(res) {
-				that.setData({
-					latitude: res.latitude,
-					longitude: res.longitude,
-				})
-
 				// 把经纬度返回全局
 				app.globalData.lat = res.latitude
 				app.globalData.lon = res.longitude
@@ -48,7 +41,7 @@ Page({
 				wx.login({
 					success: function(res) {
 						if (res.code) {
-              that.sendRequest(res.code)
+							that.sendRequest(res.code)
 						} else {
 							console.log("用户登录获取失败" + res.errMsg)
 						}
@@ -86,19 +79,20 @@ Page({
 			},
 			method: "POST",
 			data: {
-				lon: that.data.longitude,
-				lat: that.data.latitude,
-        js_code: js_code
+				lon: app.globalData.lon,
+				lat: app.globalData.lat,
+				js_code: js_code
 			},
 			success: function(res) {
-        console.log(res.data)
-        app.globalData.openid = res.data.user_id
+				console.log(res.data)
+				app.globalData.openid = res.data.user_id
+
 				// 将json字符串转为json对象
 				var img0 = JSON.parse(res.data.image_json0)
 				var img1 = JSON.parse(res.data.image_json1)
 				var img2 = JSON.parse(res.data.image_json2)
 				that.setData({
-          openid:res.data.user_id,
+					openid: res.data.user_id,
 					region: res.data.area_name,
 					bannerImg: [
 						img0.path,
@@ -148,7 +142,9 @@ Page({
 		})
 	},
 	positionTap: function() {
-		console.log("定位系统")
+		wx.navigateTo({
+			url: "locationSelection/locationSelection"
+		})
 	},
 	// 右上角转发
 	onShareAppMessage: function() {

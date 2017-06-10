@@ -12,6 +12,7 @@
   </view>
 </template>
 <!-- 2列导航栏结束 -->
+
 <!-- 左侧导航栏 -->
 <template name="leftNav">
   <scroll-view scroll-y="true" class="nav-left" style="height: {{showNavUl.wH}}">
@@ -19,6 +20,7 @@
   </scroll-view>
 </template>
 <!-- 左侧导航栏结束 -->
+
 <!-- 商家列表 -->
 <template name="shopList">
   <view class="null-data" wx-if="{{shopList.li[0] == null}}">暂无数据~~</view>
@@ -37,6 +39,7 @@
   </scroll-view>
 </template>
 <!-- 商家列表结束 -->
+
 <!-- 信息列表 -->
 <template name="infoList">
   <view class="null-data" wx-if="{{infoList.li[0] == null}}">暂无数据~~</view>
@@ -53,6 +56,7 @@
   </scroll-view>
 </template>
 <!-- 信息列表结束 -->
+
 <!-- 商品列表 -->
 <template name="commodityList">
   <view class="null-data" wx-if="{{commodityList.li[0] == null}}">暂无数据~~</view>
@@ -78,6 +82,7 @@
   </scroll-view>
 </template>
 <!-- 商品列表结束 -->
+
 <!-- 底部购物车 -->
 <template name="shoppingCart">
   <view class="b-shoppingCart" bindtap="cartTap">
@@ -90,13 +95,14 @@
   </view>
 </template>
 <!-- 底部购物车结束 -->
+
 <!-- 个人中心 -->
 <template name="my">
   <view class="my-header" bindtap="loginTap">
     <view class="head-portrait">
       <image src="{{my.headPortrait}}"></image>
     </view>
-    <view class="nickname">{{my.nickname}}</view>
+    <view class="nickname">{{ my.nickname }}</view>
   </view>
   <!-- 消息提示 -->
   <view class="red-spot" wx:if="{{ my.msg }}"> </view>
@@ -109,11 +115,13 @@
   </view>
 </template>
 <!-- 个人中心结束 -->
+
 <!-- 底部导航 -->
 <template name="bottomBtn">
   <view class="bottom-btn" bindtap="bottomBtn">{{bottomBtn}}</view>
 </template>
 <!-- 底部导航结束 -->
+
 <!-- 顶部选项卡 -->
 <template name="topTab">
   <view class="swiper-tab">
@@ -141,6 +149,7 @@
   </swiper>
 </template>
 <!-- 顶部选项卡结束 -->
+
 <!-- 发布界面 -->
 <template name="releaseLayout">
   <view class="tab-content-li" wx:for="{{tab.li}}" wx:key="{{index}}" bindtap="releaseTap" data-idx="{{index}}">
@@ -149,4 +158,3 @@
     <view class="tab-content-right">></view>
   </view>
 </template>
-
