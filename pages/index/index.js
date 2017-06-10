@@ -41,6 +41,7 @@ Page({
 				wx.login({
 					success: function(res) {
 						if (res.code) {
+							app.globalData.openid = res.code
 							that.sendRequest(res.code)
 						} else {
 							console.log("用户登录获取失败" + res.errMsg)
@@ -66,6 +67,10 @@ Page({
 				console.log("定位fail")
 			}
 		})
+	},
+	onShow: function() {
+		console.log(app.globalData.openid)
+		// this.sendRequest(app.globalData.openid)
 	},
 	// 发送请求
 	sendRequest: function(js_code) {

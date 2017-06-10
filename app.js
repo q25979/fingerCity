@@ -14,6 +14,8 @@ App({
     avatarUrl: null,
     areaId: 0,
     openid: "",
+    lon: 0,
+    lat: 0,
     // 服务器地址
     serviceUrl: "https://pipi.ihyou.cn/Street/"
   }
