@@ -1,0 +1,8 @@
+@import '../common/common.wxss';
+@import '../../wxParse/wxParse.wxss';
+
+page
+{
+    background: #fff;
+}
+

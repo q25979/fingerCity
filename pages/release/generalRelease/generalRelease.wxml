@@ -1,0 +1,6 @@
+<view class="data-list">
+	<view class="li" wx:for="{{dataList}}" wx:key="{{index}}" bindtap="releaseFormTap" data-idx="{{index}}">
+		<image src="{{imgSrc[index]}}"></image>
+		<text>{{item}}</text>
+	</view>
+</view>

@@ -1,0 +1,40 @@
+swiper {
+	width: 100%;
+	height: 400rpx;
+}
+swiper image {
+	width: 100%;
+	height: 100%;
+}
+.info {
+	font-size: 11pt;
+	color: #353535;
+}
+.header, .content {
+	margin-top: 20rpx;
+	background: #fff;
+	padding: 20rpx;
+}
+.header view {
+	margin-top: 13rpx;
+}
+.title {
+	margin-top: 0;
+	font-weight: bold;
+	font-size: 13pt;
+}
+.content {
+	line-height: 1.5em;
+}
+
+.tel-btn {
+	height: 100rpx;
+	line-height: 100rpx;
+	width: 100%;
+	background: #FE8E44;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	font-weight: bold;
+}

@@ -1,0 +1,594 @@
+.clearfix:after
+{
+    display: block;
+    clear: both;
+    overflow: hidden;
+
+    content: '';
+}
+.center
+{
+    position: relative;
+    top: 51%;
+    left: 51%;
+
+    transform: translate(-49%, -49%);
+}
+/*导航*/
+.nav
+{
+    font-size: 11pt;
+
+    width: 750rpx;
+    height: 400rpx;
+
+    background: #fff;
+}
+.navUl
+{
+    width: 750rpx;
+    height: 150rpx;
+}
+.navLi
+{
+    float: left;
+
+    width: 187.5rpx;
+    height: 150rpx;
+    margin-bottom: 45rpx;
+
+    text-align: center;
+}
+.navBg
+{
+    width: 120rpx;
+    height: 120rpx;
+
+    border-radius: 50%;
+}
+.navImg
+{
+    display: block;
+
+    width: 80rpx;
+    height: 80rpx;
+}
+.navLi text
+{
+    line-height: 90rpx;
+}
+/*导航结束*/
+
+/*左侧导航*/
+.nav-left
+{
+    font-size: 11pt;
+
+    float: left;
+
+    width: 25%;
+    height: 1000rpx;
+
+    color: #4c4c4c;
+    background: #e5e5e5;
+}
+.nav-title
+{
+    line-height: 90rpx;
+
+    height: 90rpx;
+
+    text-align: center;
+
+    border-bottom: 1rpx solid #fff;
+}
+.nav-left-active
+{
+    font-weight: bold;
+
+    color: #2fc3ff;
+    background: #fff;
+}
+.r-title
+{
+    font-size: 13pt;
+    font-weight: bold;
+}
+.r-title .top
+{
+    font-size: 7pt;
+    line-height: 30rpx;
+
+    float: left;
+
+    width: 30rpx;
+    height: 30rpx;
+
+    text-align: center;
+
+    color: #f44;
+    border: 1rpx solid #f44;
+    border-radius: 5rpx;
+}
+/*左侧导航结束*/
+
+/*商家列表*/
+.scroll-view
+{
+    float: right;
+
+    width: 75%;
+
+    background: #fff;
+}
+.shop-list
+{
+    width: 100%;
+    padding: 3%;
+
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+.shop-list-left
+{
+    float: left;
+    overflow: hidden;
+
+    width: 230rpx;
+    height: 180rpx;
+    margin-top: 8rpx;
+    margin-right: 10rpx;
+
+    border-radius: 10rpx;
+}
+.shop-list-left image
+{
+    width: 100%;
+    height: 100%;
+}
+.shop-list-right
+{
+    font-size: 11pt;
+
+    float: left;
+
+    width: 240rpx;
+}
+.shop-list-right .r-title
+{
+    font-size: 13pt;
+    font-weight: normal;
+
+    color: #000;
+}
+.r-new-price
+{
+    font-size: 13pt;
+
+    margin: 6rpx 0;
+
+    color: #f00;
+}
+.r-old-price
+{
+    margin: 6rpx 0 0 0;
+
+    text-decoration: line-through;
+
+    color: #888;
+}
+/*商家列表结束*/
+
+/*信息列表*/
+.info-list
+{
+    font-size: 11pt;
+}
+.info-header
+{
+    font-size: 12pt;
+    font-weight: bold;
+
+    color: #333;
+}
+.info-content
+{
+    line-height: 1.5em;
+
+    margin: 15rpx 15rpx 0 0;
+
+    text-indent: 1em;
+
+    color: #333;
+}
+.info-footer
+{
+    margin-top: 15rpx;
+    /*font-weight: bold;*/
+
+    color: #666;
+}
+.info-data
+{
+    /*float: left;*/
+}
+.info-tel
+{
+    /*float: left;*/
+    margin-top: 10rpx;
+}
+.null-data
+{
+    line-height: 100rpx;
+
+    position: absolute;
+    top: 80rpx;
+    left: 30%;
+
+    float: right;
+    /*padding: 20rpx;*/
+
+    width: 70%;
+    height: 100rpx;
+
+    text-align: center;
+
+    background: #fff;
+}
+/*信息列表结束*/
+
+/*商品列表*/
+.commodity-list
+{
+    float: right;
+
+    width: 94%;
+    padding: 3%;
+
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+.commodity-list-left
+{
+    float: left;
+    overflow: hidden;
+
+    width: 30%;
+    height: 140rpx;
+    margin-right: 20rpx;
+
+    border-radius: 5rpx;
+}
+.commodity-list-left image
+{
+    width: 100%;
+    height: 100%;
+}
+.commodity-list-right
+{
+    font-size: 11pt;
+
+    float: left;
+
+    width: 65%;
+}
+.commodity-list-right .r-title
+{
+    font-size: 11pt;
+}
+.commodity-list-right .r-price
+{
+    margin-top: 40rpx;
+
+    color: #f60;
+}
+.r-price-l
+{
+    font-size: 13pt;
+
+    float: left;
+
+    vertical-align: center;
+}
+.r-price-r
+{
+    float: right;
+    /*margin-left: 25rpx;*/
+}
+.r-price-r image
+{
+    width: 45rpx;
+    height: 45rpx;
+}
+.r-price-r text
+{
+    font-size: 13pt;
+
+    position: relative;
+    top: -5rpx;
+
+    margin: 0 20rpx;
+
+    color: #353535;
+}
+.blank
+{
+    height: 140rpx;
+
+    border-bottom: 0rpx;
+}
+/*商品列表结束*/
+
+/*底部购物车*/
+.b-shoppingCart
+{
+    position: fixed;
+    /*z-index: 999;*/
+    bottom: 0;
+
+    width: 100%;
+    height: 120rpx;
+
+    background: #fff;
+}
+.cart-l
+{
+    font-size: 16pt;
+    font-weight: bold;
+
+    float: left;
+
+    width: 30%;
+    height: 100%;
+
+    color: #f60;
+}
+.cart-l image
+{
+    position: absolute;
+    top: -20rpx;
+    left: 10rpx;
+
+    width: 130rpx;
+    height: 130rpx;
+}
+.cart-l text
+{
+    position: absolute;
+    top: 50rpx;
+    left: 135rpx;
+}
+.cart-r
+{
+    font-weight: bold;
+    line-height: 120rpx;
+
+    float: right;
+
+    width: 25%;
+    height: 100%;
+
+    text-align: center;
+
+    color: #fff;
+    background: #c96;
+}
+.sum-num
+{
+    font-size: 9pt;
+    line-height: 40rpx;
+
+    position: absolute;
+    top: -10rpx;
+    left: 100rpx;
+
+    width: 40rpx;
+    height: 40rpx;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 50%;
+    background: red;
+}
+/*底部购物车结束*/
+
+/*我的*/
+.my-header
+{
+    width: 100%;
+    height: 300rpx;
+
+    color: white;
+    background: #2FC3FF;
+    box-shadow: 0 1rpx #c93;
+}
+.head-portrait
+{
+    position: relative;
+    top: 20rpx;
+
+    overflow: hidden;
+
+    width: 200rpx;
+    height: 200rpx;
+    margin: 0 auto;
+
+    border-radius: 50%;
+}
+.head-portrait image
+{
+    width: 100%;
+    height: 100%;
+}
+.nickname
+{
+    position: relative;
+    top: 20rpx;
+
+    text-align: center;
+}
+.my-content
+{
+    font-size: 11pt;
+    line-height: 120rpx;
+
+    height: 120rpx;
+
+    box-shadow: 0 1rpx #ccc;
+}
+.my-content image
+{
+    position: relative;
+    top: 40rpx;
+
+    display: block;
+    float: left;
+
+    width: 40rpx;
+    height: 40rpx;
+}
+.my-content view
+{
+    float: left;
+
+    margin-left: 20rpx;
+}
+.my-content .goto
+{
+    float: right;
+
+    margin-right: 20rpx;
+}
+/*我的结束*/
+
+/*底部按钮*/
+.bottom-btn
+{
+    font-size: 13pt;
+    line-height: 100rpx;
+
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    height: 100rpx;
+
+    text-align: center;
+
+    color: #fff;
+    background: #2bc8db;
+}
+/*底部按钮结束*/
+
+/*顶部选项卡*/
+.swiper-tab
+{
+    line-height: 80rpx;
+
+    width: 100%;
+
+    text-align: center;
+
+    border-bottom: 2rpx solid #777;
+}
+.swiper-tab-list
+{
+    font-size: 30rpx;
+
+    display: inline-block;
+
+    width: 50%;
+
+    color: #777;
+}
+.on
+{
+    font-weight: bold;
+
+    color: #da7c0c;
+    border-bottom: 5rpx solid #da7c0c;
+}
+.swiper-box
+{
+    height: 800rpx;
+}
+
+.tab-content-li
+{
+    line-height: 100rpx;
+
+    height: 100rpx;
+
+    border-bottom: 1rpx solid #ececec;
+}
+.tab-content-li image
+{
+    position: relative;
+    top: 50%;
+
+    float: left;
+
+    width: 60rpx;
+    height: 60rpx;
+    margin: 0 20rpx 0 30rpx;
+
+    transform: translateY(-50%);
+}
+.tab-content-center,
+.tab-content-right
+{
+    line-height: 100rpx;
+
+    float: left;
+
+    height: 100rpx;
+}
+.tab-content-right
+{
+    float: right;
+
+    margin-right: 30rpx;
+}
+.confirm-btn
+{
+    line-height: 80rpx;
+
+    width: 100%;
+    height: 80rpx;
+
+    text-align: center;
+
+    color: #fff;
+    background: #2bc8db;
+}
+.release-notice input
+{
+    height: 100rpx;
+    padding: 0 20rpx;
+
+    border-bottom: 1rpx solid #ececec;
+}
+.release-product
+{
+    margin-top: 20rpx;
+}
+/*顶部选项卡结束*/
+
+/*富文本编辑器*/
+.wxParse-auto-view
+{
+    margin: 20rpx 0;
+
+    background-color: #fff;
+}
+.wxParse-auto-view view,
+.wxParse-auto-view image
+{
+    /*display: block;*/
+}
+.wxParse-auto-view image
+{
+    max-width: 700rpx;
+}
+/*富文本编辑器结束*/

@@ -1,0 +1,15 @@
+<swiper indicator-dots="true">
+	<swiper-item wx:for="{{images}}" wx:key="{{index}}">
+		<image src="{{item.image}}"></image>
+	</swiper-item>
+</swiper>
+
+<view class="info">
+	<view class="header">
+		<view class="title">{{title}}</view>
+		<view class="tel">电话:{{tel}}</view>
+		<view class="data">发布时间:{{data}}</view>
+	</view>
+	<view class="content">{{content}}</view>
+	<view class="tel-btn" bindtap="btnTap">{{btn}}</view>
+</view>

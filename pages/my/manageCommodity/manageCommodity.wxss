@@ -1,0 +1,51 @@
+/*商品图片*/
+.commodity-img image {
+	width: 100%;
+	height: 450rpx;
+}
+/*商品内容*/
+.commodity-content {
+	background: #fff;
+	font-size: 11pt;
+	color: #353535;
+}
+.commodity-input {
+	background: #fff;
+	height: 80rpx;
+	border-bottom: 1rpx solid #ececec;
+	padding: 0 30rpx;
+}
+.commodity-input input {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 11pt;
+}
+.commodity-introduce {
+	padding: 30rpx;
+	background: #fff;
+}
+.introduce-title {
+	margin-bottom: 20rpx;
+}
+/*底部按钮*/
+.bottom-btn {
+	margin-top: 120rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	width: 100%;
+	background: #2BC8DB;
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+}
+.add-btn, .del-btn {
+	text-align: center;
+	height: 100%;
+	width: 50%;
+	float: left;
+	box-shadow: 1rpx 1rpx #ececec;
+}
+.del-btn {
+	background: #c03;
+}

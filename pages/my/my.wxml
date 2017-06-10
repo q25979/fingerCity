@@ -1,0 +1,15 @@
+<import src="../common/common.wxml" />
+
+<!-- 导入个人中心 -->
+<template is="my" data="{{my}}"></template>
+
+<!-- 联系客服对话框 -->
+<view bindtap="backgroundTap" class="service-show" hidden="{{showBtn}}" style="height:{{wH+'rpx'}}">
+	<view class="show-btn" animation="{{animationData}}">
+		<view class="li" bindtap="dialogTap" data-idx="0">拨打电话</view>
+		<view class="li" bindtap="dialogTap" data-idx="1">
+			<button plain="true" bindtap="dialogTap" data-idx="1" open-type="contact">微信客服</button>
+		</view>
+		<view class="li" bindtap="dialogTap" data-idx="2">取消</view>
+	</view>
+</view>

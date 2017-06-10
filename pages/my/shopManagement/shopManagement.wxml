@@ -1,0 +1,67 @@
+<view class="container">
+
+  <view class="doc-title">{{ docTitle }}</view>
+
+  <form bindsubmit="formSubmit">
+    <view class="zan-form">
+      <view class="zan-cell zan-form__item zan-copy" bindtap="copyTap">
+        <image src="../../../resource/navigate.png"></image>
+        <text>发布商品点击复制链接</text>
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">剩余天数</text>
+        <input class="zan-form__input zan-cell__bd" name="business_renew" value="{{day}}" disabled="true" />
+        <view class="zan-label--button" bindtap="renewTap">
+          续费
+        </view>
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">店铺名</text>
+        <input value="{{shopname}}" class="zan-form__input zan-cell__bd" name="business_name" placeholder="店铺名" />
+      </view>
+      <view bindtap="selectLocation" class="zan-cell zan-form__item">
+        <text class="zan-form__title">地址</text>
+        <input class="zan-form__input zan-cell__bd" name="address" placeholder="地址" value="{{dizhi}}" disabled="true" />
+      </view>
+      <view bindtap="selectLocation" class="zan-cell zan-form__item">
+        <text class="zan-form__title">详细地址</text>
+        <input class="zan-form__input zan-cell__bd" name="detaile_address" placeholder="详细地址" value="{{dizhidetail}}" disabled="true" />
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">联系电话</text>
+        <input class="zan-form__input zan-cell__bd" type="number" maxlength="20" value="{{phone}}" name="tel" placeholder="手机或固定电话" />
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">微信</text>
+        <input class="zan-form__input zan-cell__bd" name="wechat" placeholder="您的微信号" value="{{wechat}}" />
+      </view>
+      <view class="zan-cell zan-form__item zan-cell--last-child">
+        <text class="zan-form__title">分类</text>
+        <view class="zan-form__input zan-cell__bd">
+          {{fenlei}}
+        </view>
+      </view>
+      <view class="zan-cell zan-form__item zan-cell--last-child">
+        <text class="zan-form__title">所属类型</text>
+        <view class="zan-form__input zan-cell__bd">
+        {{leixing}}
+        </view>
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">店铺LOGO</text>
+        <button class="zan-btn zan-btn--file" bindtap="logoImgTap">
+          <text hidden="{{ logoImg != '' }}">选择图片</text>
+          <image src="{{ logoImg }}"></image>
+        </button>
+      </view>
+    </view>
+    <view class="zan-panel">
+      <view class="zan-btns">
+        <button class="zan-btn zan-btn--disabled" form-type="submit">
+          {{confirmBtn}}
+        </button>
+      </view>
+    </view>
+  </form>
+
+</view>

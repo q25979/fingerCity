@@ -1,0 +1,22 @@
+<import src="../../wxParse/wxParse.wxml" />
+<!-- 轮播图 -->
+<swiper class="header" indicator-dots="true" autoplay="true"  bindtap="bannerTap" indicator-color="rgba(255, 255, 255, 0.5)" indicator-active-color="#FE8E44" bindchange="bannerChange" data-idx="{{current}}">
+	<swiper-item wx:for="{{bannerImg}}" wx:key="{{index}}">
+		<image src="{{item}}" class="banner"></image>
+	</swiper-item>
+</swiper>
+
+<view class="position-map" bindtap="positionTap">
+	<image src="../../resource/position.png"></image>
+	<view>{{region}} ></view>
+</view>
+
+<import src="../common/common.wxml" />
+
+<!-- 导入导航模板 -->
+<template is="nav" data="{{navUl}}" />
+
+<!-- 富文本编辑器解析 -->
+<view class="wxParse-auto-view">
+	<template is="wxParse" data="{{wxParseData:indexCnt.nodes}}"/>
+</view>

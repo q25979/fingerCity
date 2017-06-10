@@ -1,0 +1,204 @@
+page
+{
+    background: #fff;
+}
+
+.no-goods {
+    margin: 50rpx 0;
+    text-align: center;
+}
+
+/*外部容器*/
+.container
+{
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+/*整体列表*/
+.carts-list
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 100rpx;
+    padding: 20rpx 40rpx;
+}
+
+/*每行单元格*/
+.carts-item
+{
+    display: flex;
+    flex-direction: row;
+    /*width属性解决标题文字太短而缩略图偏移*/
+
+    width: 100%;
+    height: 150rpx;
+    padding: 30rpx 0;
+
+    border-bottom: 1px solid silver;
+}
+
+/*左部图片*/
+.carts-image
+{
+    width: 150rpx;
+    height: 150rpx;
+    z-index: 999;
+}
+
+
+/*右部描述*/
+.carts-text
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    justify-content: space-between;
+}
+
+/*右上部分标题*/
+.carts-title
+{
+    font-size: 13pt;
+
+    margin: 10rpx;
+}
+
+/*右下部分价格与数量*/
+.carts-subtitle
+{
+    font-size: 11pt;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 0 20rpx;
+
+    color: darkgray;
+
+    justify-content: space-between;
+}
+
+/*价格*/
+.carts-price
+{
+    color: #f60;
+}
+
+/*加减*/
+.stepper
+{
+    font-size: 13pt;
+
+    display: flex;
+    flex-direction: row;
+
+    height: 50rpx;
+
+    color: #353535;
+    border: 1rpx solid #c9c9c9;
+    border-radius: 5rpx;
+}
+.stepper text
+{
+    line-height: 50rpx;
+
+    width: 40rpx;
+
+    text-align: center;
+}
+.stepper input
+{
+    width: 80rpx;
+    height: 100%;
+
+    text-align: center;
+    font-size: 11pt;
+
+    border-right: 1rpx solid #c9c9c9;
+    border-left: 1rpx solid #c9c9c9;
+}
+.minus
+{
+    line-height: 45rpx;
+}
+.normal
+{
+    color: #353535;
+}
+.disabled
+{
+    color: #ccc;
+}
+
+/*复选框样式*/
+.carts-list icon
+{
+    margin-top: 60rpx;
+    margin-right: 20rpx;
+}
+
+/*底部按钮*/
+.carts-footer
+{
+    font-weight: bold;
+
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 100rpx;
+
+    border-top: 1px solid silver;
+    background: #fff;
+
+    justify-content: space-between;
+}
+
+/*复选框*/
+.carts-footer icon
+{
+    margin-left: 20rpx;
+}
+
+/*全选字样*/
+.carts-footer text
+{
+    font-size: 11pt;
+    line-height: 10rpx;
+
+    margin-left: 8rpx;
+}
+
+/*立即结算按钮*/
+.carts-footer .button
+{
+    font-size: 13pt;
+    line-height: 100rpx;
+
+    width: 220rpx;
+    height: 100rpx;
+
+    text-align: center;
+
+    color: white;
+    border: 0;
+    border-radius: 0;
+    background-color: #f60;
+}
+.select-all {
+    position: relative;
+    top: 20rpx;
+}

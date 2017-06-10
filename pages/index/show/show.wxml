@@ -1,0 +1,22 @@
+<import src="../../common/common.wxml" />
+
+<view class="show-title">
+	<view class="show-notice" bindtap="noticeTap">
+		<image src="../../res/notice.png" hidden="{{showNotice==''}}"></image>
+		<text>{{showNotice}}</text>
+	</view>
+</view>
+
+<view class="show-space"></view>
+
+<!-- 导入左侧导航模板 -->
+<template is="leftNav" data="{{showNavUl}}" />
+<!-- 导入商品列表模板 -->
+<template wx:if="{{id == '00'}}" is="shopList" data="{{shopList}}" />
+<template wx:if="{{id == '01'}}" is="shopList" data="{{shopList}}" />
+<template wx:if="{{id == '02'}}" is="shopList" data="{{shopList}}" />
+<template wx:if="{{id == '03'}}" is="shopList" data="{{shopList}}" />
+<template wx:if="{{id == '10'}}" is="infoList" data="{{infoList}}" />
+<template wx:if="{{id == '11'}}" is="infoList" data="{{infoList}}" />
+<template wx:if="{{id == '12'}}" is="infoList" data="{{infoList}}" />
+<template wx:if="{{id == '13'}}" is="infoList" data="{{infoList}}" />

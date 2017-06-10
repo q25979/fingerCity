@@ -1,0 +1,27 @@
+<import src="../../common/common.wxml" />
+
+<!-- 头部 -->
+<view class="details-header">
+	<view class="shop-logo">
+		<image src="{{logoSrc}}"></image>
+	</view>
+	<view class="shop-info center">
+		<view class="shop-title">{{shopTitle}}</view>
+		<view class="shop-tel" bindtap="phoneTap">电话:{{shopTel}}
+			<image src="../../../resource/phone.png"></image>
+		</view>
+		<view class="shop-wechat" bindtap="wechatTap">微信:{{wechat}}
+			<image src="../../../resource/copy.png"></image>
+		</view>
+		<view class="shop-addr">地址:{{shopAddr}}</view>
+	</view>
+</view>
+<view class="shop-notice">公告:{{announcement}}</view>
+<!-- 头部结束 -->
+
+<!-- 左侧导航 -->
+<template is="leftNav" data="{{showNavUl}}"></template>
+<!-- 右侧商品价格 -->
+<template is="commodityList" data="{{commodityList}}"></template>
+<!-- 底部购物车 -->
+<template is="shoppingCart" data="{{commodityList}}"></template>

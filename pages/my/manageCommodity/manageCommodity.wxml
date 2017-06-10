@@ -1,0 +1,28 @@
+<view class="commodity-img">
+	<image src="{{commodityImg}}" bindtap="commodityImg"></image>
+</view>
+
+<!-- 商品内容部分 -->
+<view class="commodity-content">
+	<view class="commodity-input">
+		<input placeholder="商品的名称" />
+	</view>
+	<view class="commodity-input">
+		<input type="number" placeholder="商品的原价" />
+	</view>
+	<view class="commodity-input">
+		<input type="number" placeholder="商品的现价" />
+	</view>
+	
+	
+	<view class="commodity-introduce">
+		<view class="introduce-title">商品介绍</view>
+		<textarea placeholder="这是商品介绍内容" />
+	</view>
+</view>
+
+<!-- 底部按钮 -->
+<view class="bottom-btn">
+	<view class="add-btn">添加</view>
+	<view class="del-btn">删除</view>
+</view>

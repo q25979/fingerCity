@@ -1,0 +1,38 @@
+<view class="no-goods" hidden="{{carts[0]}}">空空如也~~~</view>
+
+<view class="container carts-list">
+  <view wx:for="{{carts}}" wx:key="{{index}}" class="carts-item" data-title="{{item.title}}" data-url="{{item.url}}" bindtap="bindViewTap">
+    <icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-index="{{index}}"/>
+    <icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{index}}"/>
+    <view>
+     <image bindtap="bindCheckbox" data-index="{{index}}" class="carts-image" src="{{item.image}}" mode="aspectFill"/>
+    </view>
+   <view class="carts-text">
+    <text bindtap="bindCheckbox" data-index="{{index}}" class="carts-title">{{item.goods_name}}</text>
+    <view class="carts-subtitle">
+     <text bindtap="bindCheckbox" data-index="{{index}}" class="carts-price">￥{{item.cur_price}}</text>
+     <view class="stepper">
+       <!-- 减号 -->
+       <text class="{{minusStatuses[index]}} minus" data-index="{{index}}" bindtap="bindMinus">-</text>
+       <!-- 数值 -->
+       <input type="number" disabled="true" bindchange="bindManual" value="{{item.num}}" />
+       <!-- 加号 -->
+       <text class="normal" data-index="{{index}}" bindtap="bindPlus">+</text>
+     </view>
+    </view>
+   </view>
+  </view>
+</view>
+
+<view class="carts-footer">
+    <view class="select-all" bindtap="bindSelectAll">
+        <icon wx:if="{{selectedAllStatus}}" type="success_circle" size="20"/>
+        <icon wx:else type="circle" size="20" />
+        <text>全选</text>
+        <toast hidden="{{toastHidden}}" bindchange="bindToastChange">
+            {{toastStr}}
+        </toast>
+        <text>{{total}}</text>
+    </view>
+    <view class="button" bindtap="bindCheckout">提交订单</view>
+</view>

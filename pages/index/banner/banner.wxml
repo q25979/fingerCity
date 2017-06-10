@@ -1,0 +1,6 @@
+<import src="../../../wxParse/wxParse.wxml" />
+
+<!-- 富文本编辑器解析 -->
+<view class="wxParse-auto-view">
+	<template is="wxParse" data="{{wxParseData:bannerCnt.nodes}}"/>
+</view>

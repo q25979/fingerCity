@@ -1,0 +1,33 @@
+page {
+	background: #ececec;
+}
+.data-list {
+	font-size: 15pt;
+	width: 100%;
+}
+.data-list .li {
+	text-align: center;
+	height: 180rpx;
+	color: #66c;
+	font-size: 11pt;
+	border: 1rpx solid silver;
+	margin: 20rpx 20rpx 10rpx;
+	overflow: hidden;
+	border-radius: 10rpx;
+}
+.data-list .li image {
+	width: 100%;
+	height: 70%;
+	display: block;
+}
+.data-list .li text {
+	display: block;
+	height: 30%;
+	line-height: 54rpx;
+	color: #353535;
+	background: #fff;
+}
+.data-list .li:active {
+	/*box-shadow: 0 0 0rpx #fff;*/
+	/*border: 1rpx solid #ececec;*/
+}

@@ -1,0 +1,51 @@
+@import '../common/common.wxss';
+page
+{
+    background: #fff;
+}
+
+/*自定义对话框*/
+.service-show
+{
+    font-size: 13pt;
+
+    position: fixed;
+    bottom: 0;
+
+    width: 750rpx;
+
+    color: #353535;
+    background: rgba(0, 0, 0, .3);
+}
+.service-show .li
+{
+    line-height: 80rpx;
+
+    width: 750rpx;
+    height: 80rpx;
+    padding: 10rpx 0;
+
+    text-align: center;
+}
+.service-show .li button
+{
+    font-size: 13pt;
+    line-height: 80rpx;
+
+    width: 750rpx;
+    height: 80rpx;
+
+    color: #353535;
+    border: 1rpx solid #fff;
+    border-radius: 0;
+}
+.show-btn
+{
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+
+    height: 0;
+
+    background: #fff;
+}

@@ -1,0 +1,67 @@
+@import '../../common/common.wxss';
+
+/*商品详情头部*/
+.details-header
+{
+    position: relative;
+
+    height: 300rpx;
+
+    background: #fff;
+    border-bottom: 1rpx dashed #ddd;
+}
+.shop-logo
+{
+    position: absolute;
+    top: 50%;
+    left: 30rpx;
+
+    overflow: hidden;
+
+    width: 200rpx;
+    height: 200rpx;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+}
+.shop-logo image
+{
+    width: 100%;
+    height: 100%;
+}
+.shop-info
+{
+    width: 480rpx;
+    margin-left: 95rpx;
+
+    color: #888;
+    font-size: 11pt;
+}
+.shop-info view
+{
+    margin-bottom: 10rpx;
+}
+.shop-info image {
+    width: 35rpx;
+    height: 35rpx;
+    margin-left: 20rpx;
+}
+.shop-title
+{
+    font-size: 13pt;
+
+    color: #353535;
+}
+.shop-notice
+{
+    font-size: 11pt;
+
+    text-align: center;
+    padding: 20rpx 20rpx;
+
+    color: #66c;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+}
+/*商品详情头部结束*/

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/release/release",
+
+    "pages/index/show/show",
+    "pages/index/shopDetails/shopDetails",
+    "pages/index/commodityDetails/commodityDetails",
+    "pages/index/infoDetails/infoDetails",
+    "pages/index/carts/carts",
+    "pages/index/banner/banner",
+
+    "pages/my/merchantsSettled/merchantsSettled",
+    "pages/my/shopManagement/shopManagement",
+
+    "pages/release/generalRelease/generalRelease",
+    "pages/release/formRelease/formRelease"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2FC3FF",
+    "navigationBarTitleText": "指尖的城",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "text": "首页",
+      "pagePath": "pages/index/index",
+      "iconPath": "resource/index-no.png",
+      "selectedIconPath": "resource/index-click.png"
+    }, {
+      "text": "发布",
+      "pagePath": "pages/release/release",
+      "iconPath": "resource/release-no.png",
+      "selectedIconPath": "resource/release-click.png"
+    }, {
+      "text": "我的",
+      "pagePath": "pages/my/my",
+      "iconPath": "resource/my-no.png",
+      "selectedIconPath": "resource/my-click.png"
+    }],
+    "selectedColor": "#2FC3FF",
+    "color": "#353535"
+  }
+}

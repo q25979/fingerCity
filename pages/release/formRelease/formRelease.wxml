@@ -1,0 +1,21 @@
+<form bindsubmit="formSubmit">
+	<view class="img">
+		<button type="primary" bindtap="upload">上传图片</button>
+		<image bindtap="removePic" id="{{index}}" wx:for="{{img}}" wx:key="{{index}}" src="{{item}}"></image>
+	</view>
+	<view class="title form-box">
+		<image src="../../res/title.png"></image>
+		<input maxlength="40" name="title" placeholder="请输入你发布的标题" type="text" />
+	</view>
+	<view class="tel form-box">
+		<image src="../../res/tel.png"></image>
+		<input name="tel" placeholder="请输入你的电话号码" type="number" maxlength="11" />
+	</view>
+	<view class="content">
+		<textarea name="content" placeholder="输入发布的详细内容"></textarea>
+	</view>
+	<view class="btn">
+		<button formType="submit" type="primary">发布</button>
+		<button bindtap="resetTap" formType="reset" type="warn">清空</button>
+	</view>
+</form>

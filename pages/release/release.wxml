@@ -1,0 +1,9 @@
+<import src="../common/common.wxml"></import>
+<import src="../../wxParse/wxParse.wxml" />
+
+<template is="releaseLayout" data="{{tab}}"></template>
+
+<!-- 富文本编辑器解析 -->
+<view class="wxParse-auto-view">
+	<template is="wxParse" data="{{wxParseData:releaseCnt.nodes}}"/>
+</view>

@@ -1,0 +1,31 @@
+@import "../../common/common.wxss";
+/*顶部公告*/
+.show-title {
+    background: #2FC3FF;
+	height: 80rpx;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+.show-space {
+	margin-top: 80rpx;
+}
+.show-notice {
+	height: 80rpx;
+	line-height: 80rpx;
+	font-size: 11pt;
+	color: #fff;
+	position: relative;
+	top: 0rpx;
+	text-align: center;
+}
+.show-notice image {
+	width: 40rpx;
+	height: 40rpx;
+	position: relative;
+	top: 10rpx;
+	margin: 0 20rpx;
+}
+.show-notice text {
+}
+/*顶部公告结束*/

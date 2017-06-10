@@ -1,0 +1,121 @@
+<view class="container">
+
+  <view class="doc-title">{{ docTitle }}</view>
+
+  <form bindsubmit="formSubmit">
+    <view class="zan-form">
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">商家名字</text>
+        <input
+          class="zan-form__input zan-cell__bd"
+          name="business_name"
+          placeholder="商家名字"
+        />
+      </view>
+      <view bindtap="selectLocation" class="zan-cell zan-form__item">
+        <text class="zan-form__title">地址</text>
+        <input
+          class="zan-form__input zan-cell__bd"
+          name="address"
+          placeholder="地址"
+          disabled = "true"
+          value = "{{dizhi}}"
+        />
+      </view>
+      <view bindtap="selectLocation" class="zan-cell zan-form__item">
+        <text class="zan-form__title">详细地址</text>
+        <input
+          class="zan-form__input zan-cell__bd"
+          name="detaile_address"
+          placeholder="详细地址"
+          disabled = "true"
+          value = "{{detaildizhi}}"
+        />
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">联系电话</text>
+        <input
+          class="zan-form__input zan-cell__bd"
+          type="number"
+          maxlength="20"
+          name="tel"
+          placeholder="手机或固定电话"
+        />
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">微信</text>
+        <input
+          class="zan-form__input zan-cell__bd"
+          name="wechat"
+          placeholder="您的微信号"
+        />
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">登录账号</text>
+        <input
+          class="zan-form__input zan-cell__bd"
+          name="account"
+          placeholder="管理店铺的账号"
+        />
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">登录密码</text>
+        <input
+          class="zan-form__input zan-cell__bd"
+          name="password"
+          placeholder="登录密码"
+          password = 'true'
+        />
+      </view>
+      <view class="zan-cell zan-form__item zan-cell--last-child">
+        <text class="zan-form__title">选择分类</text>
+        <view class="zan-form__input zan-cell__bd">
+          <picker
+            mode="selector"
+            range="{{ area }}"
+            value="{{ areaIndex }}"
+            name="business_categroy"
+            bindchange="onAreaChange"
+          >
+            {{ area[areaIndex] }}
+          </picker>
+        </view>
+      </view>
+      <view class="zan-cell zan-form__item zan-cell--last-child">
+        <text class="zan-form__title">所属类型</text>
+        <view class="zan-form__input zan-cell__bd">
+          <picker
+            mode="selector"
+            range="{{ type }}"
+            value="{{ typeIndex }}"
+            name="type"
+            bindchange="onIndustyChange"
+          >
+            {{ type[typeIndex] }}
+          </picker>
+        </view>
+      </view>
+      <view class="zan-cell zan-form__item">
+        <text class="zan-form__title">店铺LOGO</text>
+        <button
+          class="zan-btn zan-btn--file"
+          bindtap="logoImgTap"
+        >
+          <text hidden="{{ logoImg != '' }}">选择图片</text>
+          <image src="{{ logoImg }}"></image>
+          }
+        </button>
+      </view>
+    </view>
+    <view class="zan-panel">
+      <view class="zan-btns">
+        <button
+          class="zan-btn zan-btn--disabled"
+          form-type="submit">
+          {{confirmBtn}}
+        </button>
+      </view>
+    </view>
+  </form>
+
+</view>

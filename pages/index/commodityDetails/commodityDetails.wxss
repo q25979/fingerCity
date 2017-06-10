@@ -1,0 +1,103 @@
+@import '../../common/common.wxss';
+@import '../../../wxParse/wxParse.wxss';
+
+.commodity-header
+{
+    width: 750rpx;
+    height: 450rpx;
+}
+.commodity-header image
+{
+    width: 750rpx;
+    height: 450rpx;
+}
+.commodity-content
+{
+    padding: 20rpx;
+
+    border-bottom: 1rpx solid #ececec;
+    background: #fff;
+    box-shadow: 0 1rpx 5rpx #ccc;
+}
+.commodity-title
+{
+    color: #353535;
+}
+.commodity-price
+{
+    margin-top: 30rpx;
+}
+.commodity-price image
+{
+    width: 40rpx;
+    height: 40rpx;
+}
+.price-left
+{
+    font-size: 14pt;
+    font-weight: bold;
+
+    float: left;
+
+    color: red;
+}
+.price-right
+{
+    float: right;
+}
+.price-right text
+{
+    margin: 0 20rpx;
+}
+.commodity-details
+{
+    margin: 20rpx 0 120rpx;
+    padding: 20rpx;
+
+    background: #fff;
+    box-shadow: 0 1rpx 5rpx #ccc;
+}
+.details-content
+{
+    font-size: 11pt;
+}
+.details-content image
+{
+    display: block;
+    /*需要把图片最大宽度固定*/
+
+    max-width: 700rpx;
+    max-height: 650rpx;
+    margin: 0 auto;
+}
+
+/*重写购物车*/
+.cart-l image
+{
+    position: absolute;
+    top: 5rpx;
+    left: 30rpx;
+
+    width: 90rpx;
+    height: 90rpx;
+}
+.cart-l text
+{
+    top: 40rpx;
+    left: 120rpx;
+}
+.b-shoppingCart
+{
+    height: 100rpx;
+}
+.cart-r
+{
+    line-height: 100rpx;
+
+    height: 100rpx;
+}
+.sum-num
+{
+    top: 0;
+    left: 130rpx;
+}

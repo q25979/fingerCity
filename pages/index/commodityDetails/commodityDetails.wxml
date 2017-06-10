@@ -1,0 +1,26 @@
+<import src="../../common/common.wxml" />
+<import src="../../../wxParse/wxParse.wxml" />
+
+<view class="commodity-header">
+	<image src="{{src}}"></image>
+</view>
+
+<view class="commodity-content">
+	<view class="commodity-title">{{title}}</view>
+	<view class="commodity-price clearfix">
+		<view class="price-left">￥{{price}}</view>
+		<!-- <view class="price-right">
+			<image bindtap="minusTap" src="../../../resource/minus.png"></image>
+			<text>{{num}}</text>
+			<image bindtap="addTap" src="../../../resource/add.png"></image>
+		</view> -->
+	</view>
+</view>
+
+<view class="commodity-details">
+	<view class="details-content">
+		<template is="wxParse" data="{{wxParseData:intro.nodes}}"/>
+	</view>
+</view>
+
+<!-- <template is="shoppingCart" data="{{commodityList}}"></template> -->

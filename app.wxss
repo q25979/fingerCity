@@ -1,0 +1,10 @@
+/*@font-face {
+	font-family: song;
+	src: url("http://1.xingyi001.applinzi.com/simsun.ttc");
+}*/
+page {
+	background: #ececec;
+	/*font-family: song;*/
+	font-size: 13pt;
+	color: #353535;
+}

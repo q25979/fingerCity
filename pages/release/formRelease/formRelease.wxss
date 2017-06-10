@@ -1,0 +1,66 @@
+.img image
+{
+    width: 240rpx;
+    height: 240rpx;
+    margin-right: 10rpx;
+}
+.title,
+.tel,
+.content
+{
+    border-bottom: 1rpx solid silver;
+    background: #fff;
+}
+
+.form-box
+{
+    height: 100rpx;
+
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+}
+.form-box image
+{
+    position: relative;
+    top: 50%;
+
+    float: left;
+
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 20rpx 0 30rpx;
+
+    transform: translateY(-50%);
+
+    background: #fff;
+}
+.form-box input
+{
+    font-size: 11pt;
+
+    float: left;
+
+    width: 85%;
+    height: 100%;
+
+    background: #fff;
+}
+.content textarea {
+	font-size: 11pt;
+	padding: 30rpx 0;
+	margin-left: 30rpx;
+}
+
+.btn
+{
+    position: fixed;
+    bottom: 0;
+    z-index: 99999;
+    width: 750rpx;
+}
+.btn button
+{
+    float: left;
+
+    width: 375rpx;
+}
