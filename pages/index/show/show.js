@@ -142,7 +142,7 @@ Page({
       neirong = "top_b_market"
     } else if (idx == "03") {
       neirong = "top_b_store"
-      return false
+      // return false
     } else if (idx == "10") {
       neirong = "top_s_life"
     } else if (idx == "11") {
@@ -233,7 +233,7 @@ Page({
     function clothing() {
       that.setData({
         "id": idx,
-        "showNavUl.navList": ["服装", "饰品", "鞋子", "箱包"]
+        "showNavUl.navList": ["服装", "饰品", "鞋", "箱包"]
       })
       wx.setNavigationBarTitle({
         title: '服装鞋包'

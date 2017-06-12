@@ -34,8 +34,8 @@ Page({
 	},
 	onLoad: function() {
 		var that = this
-    this.sendJudgeRequest()
-		// 获取屏幕高度
+		this.sendJudgeRequest()
+			// 获取屏幕高度
 		var systemInfo = wx.getSystemInfoSync()
 		var wH
 
@@ -72,8 +72,8 @@ Page({
 			},
 			method: "POST",
 			success: function(res) {
-        console.log(res.data)
-				// 判断是否开过店 返回的长度大于2表示开过店
+				console.log(res.data)
+					// 判断是否开过店 返回的长度大于2表示开过店
 				if (JSON.stringify(res.data).length > 2) {
 					that.setData({
 						"my.li[4].myShow": false,
@@ -93,7 +93,9 @@ Page({
 
 		wx.getUserInfo({
 			fail: function() {
-				console.log("登录失败")
+				wx.showModal({
+					title: "登录失败请卸载小程序,重新选择"
+				})
 			},
 			success: function(res) {
 				console.log(res)

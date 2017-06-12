@@ -17,9 +17,9 @@ Page({
 			src: ["res/food.png", "res/clothing.png", "res/shop.png", "res/store.png"],
 			text: ["美食", "服饰鞋包", "商超", "好店"]
 		}, {
-			bgColor: ["#FFAF48", "#77AFFE", "#FD9162", "#5FD3E0"],
+			bgColor: ["#FFAF48", "#FC76ED", "#FD9162", "#5FD3E0"],
 			src: ["res/service.png", "res/job.png", "res/lease.png", "res/2hand.png"],
-			text: ["生活服务", "招聘求职", "房屋售租", "二手买卖"]
+			text: ["生活服务", "招聘求职", "房屋租售", "二手买卖"]
 		}]
 	},
 	onShow: function() {

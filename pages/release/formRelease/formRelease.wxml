@@ -1,6 +1,6 @@
 <form bindsubmit="formSubmit">
 	<view class="img">
-		<button type="primary" bindtap="upload">上传图片</button>
+		<button class="btn-upload" bindtap="upload">上传图片</button>
 		<image bindtap="removePic" id="{{index}}" wx:for="{{img}}" wx:key="{{index}}" src="{{item}}"></image>
 	</view>
 	<view class="title form-box">

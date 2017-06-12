@@ -94,7 +94,7 @@
 
     text-align: center;
 
-    border-bottom: 1rpx solid #fff;
+    border-bottom: 1rpx dashed #fff;
 }
 
 .nav-left-active

@@ -70,11 +70,11 @@ Page({
         if (ari == 0) {
             if (num > 1) {
                 num--;
-            }else{
-              wx.showToast({
-                title: '不能再少啦~',
-                duration: 2000
-              })
+            } else {
+                wx.showToast({
+                    title: '不能再少啦~',
+                    duration: 2000
+                })
             }
         } else {
             num++;
